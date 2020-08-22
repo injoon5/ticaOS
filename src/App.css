@@ -1,0 +1,11 @@
+.App {
+  height: 100vh;
+  position: absolute;
+  width: 100vw;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  background-image: url(/assets/wallpaper_dark.png);
+  background-size: cover;
+  background-position: center;
+}

@@ -1,0 +1,41 @@
+.window {
+  position: fixed;
+  z-index: 1;
+  user-select: none;
+  border-radius: .5rem;
+  top: 10%;
+  left: 10%
+}
+
+.buttons {
+  position: absolute;
+  height: 1.5rem;
+  padding: .25rem .5rem;
+}
+
+.buttons .close {
+  position: initial;
+  background-color: red;
+  height: 1rem;
+  width: 1rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  height: 1.5rem;
+  min-width: 2rem;
+  background-color: white;
+  border-bottom: 1px solid #e2e2e2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: .5rem .5rem 0 0;
+}
+
+.content {
+  background-color: white;
+  border-radius: 0 0 .5rem .5rem;
+}
