@@ -27,9 +27,8 @@ class Window extends React.Component<windowProps, windowState> {
             <div
               className="content"
               style={{ width: this.props.width, height: this.props.height }}
-            >
-              {this.props.content}
-            </div>
+              dangerouslySetInnerHTML={{__html: this.props.content}}
+            />
           </div>
         </Draggable>
       </>
