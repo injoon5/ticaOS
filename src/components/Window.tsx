@@ -1,5 +1,6 @@
 import React from 'react';
 import Draggable from 'react-draggable';
+import Iframe from 'react-iframe';
 
 import './Window.css';
 
@@ -86,11 +87,19 @@ class Window extends React.Component<windowProps, windowState> {
               <div className="title" style={{ width: this.props.width }}>
                 {this.props.title}
               </div>
+              {/*
               <div
                 className="content"
                 style={{ width: this.props.width, height: this.props.height }}
                 dangerouslySetInnerHTML={{ __html: this.state.code }}
               />
+              */}
+              <div
+                className="content"
+                style={{ width: this.props.width, height: this.props.height }}
+              >
+                <Iframe url="https://google.com" />
+              </div>
             </div>
           </Draggable>
         </>

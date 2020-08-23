@@ -4,7 +4,8 @@ export default [
     height: 300,
     width: 300,
     content: '/apps/Hello.tica',
-    show: false,
+    show: true,
+    icon: '',
   },
   {
     title: 'wa sans',
@@ -12,5 +13,6 @@ export default [
     width: 300,
     content: '/apps/test.tica',
     show: false,
+    icon: '',
   },
 ]

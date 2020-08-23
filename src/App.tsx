@@ -39,7 +39,6 @@ class App extends React.Component<Props, State> {
           if (this.state.context) {
             this.setState({ context: false });
           }
-          console.log(this.state.apps[0].show)
         }}
       >
         <TaskBar sans={this} />

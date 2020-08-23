@@ -2,7 +2,6 @@ import React from 'react';
 import './TaskBar.css';
 import LaunchPad from './LaunchPad';
 import apps from '../apps';
-import Window from './Window';
 
 class TaskBar extends React.Component<
   { sans: any },
@@ -30,12 +29,12 @@ class TaskBar extends React.Component<
               onClick={() => this.setState({ launchpad: true, taskbar: false })}
             />
             <div className="space"></div>
-            {this.state.apps.map((value: object, index: number) => {
-              let tmp = this.props.sans.state.apps;
+            {this.state.apps.map((value: any, index: number) => {
               return (
                 <div
-                  className="item logo"
+                  className="item"
                   key={index}
+                  style={{ backgroundImage: `url(${value.icon})` }}
                   onClick={() => {
                     let state = this.props.sans.state;
                     state.apps[index].show = true;
