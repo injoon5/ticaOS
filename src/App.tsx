@@ -33,7 +33,10 @@ class App extends React.Component<Props, State> {
         className="App"
         onContextMenu={(e) => {
           e.preventDefault();
-          this.setState({ context: true, contextLoaction: [e.clientX, e.clientY], });
+          this.setState({
+            context: true,
+            contextLoaction: [e.clientX, e.clientY],
+          });
         }}
         onClick={() => {
           if (this.state.context) {
@@ -45,7 +48,10 @@ class App extends React.Component<Props, State> {
         {this.state.apps.map((value: object, index: number) => {
           return <Window key={index} index={index} sans={this} {...value} />;
         })}
-        <Context show={this.state.context} location={this.state.contextLoaction} />
+        <Context
+          show={this.state.context}
+          location={this.state.contextLoaction}
+        />
       </div>
     );
   }
