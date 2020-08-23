@@ -1,0 +1,24 @@
+.context {
+  height: max-content;
+  width: max-content;
+  min-width: 5rem;
+  background-color: white;
+  position: absolute;
+  z-index: 199999999999;
+  border: 1px solid #e2e2e2;
+  border-radius: .3rem;
+  display: flex;
+  flex-direction: column;
+  padding: .3rem;
+}
+
+.context .item {
+  display: flex;
+  padding: .3rem .5rem;
+  cursor: pointer;
+}
+
+.context .item:hover {
+  background-color: #e2e2e2;
+  border-radius: .3rem;
+}

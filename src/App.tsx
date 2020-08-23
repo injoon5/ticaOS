@@ -3,35 +3,50 @@ import React from 'react';
 // import Routes from './Routes';
 import TaskBar from './components/TaskBar';
 import Window from './components/Window';
+import Context from './components/Context';
+import apps from './apps';
 
 import './App.css';
 
-class App extends React.Component<{}, { windowProps: any }> {
+interface Props {}
+
+interface State {
+  apps: any;
+  top: number;
+  context: boolean;
+  contextLoaction: object;
+}
+
+class App extends React.Component<Props, State> {
   constructor(props: any) {
     super(props);
     this.state = {
-      windowProps: {},
+      apps,
+      top: 1,
+      context: false,
+      contextLoaction: [0, 0],
     };
-  }
-  componentDidMount() {
-    fetch(`/apps/Hello.tica`)
-      .then((res) => res.text())
-      .then((data) => {
-        this.setState({
-          windowProps: {
-            title: 'ticaOS Hello',
-            height: 300,
-            width: 300,
-            content: data,
-          },
-        });
-      });
   }
   render() {
     return (
-      <div className="App">
-        <TaskBar />
-        <Window {...this.state.windowProps} />
+      <div
+        className="App"
+        onContextMenu={(e) => {
+          e.preventDefault();
+          this.setState({ context: true, contextLoaction: [e.clientX, e.clientY], });
+        }}
+        onClick={() => {
+          if (this.state.context) {
+            this.setState({ context: false });
+          }
+          console.log(this.state.apps[0].show)
+        }}
+      >
+        <TaskBar sans={this} />
+        {this.state.apps.map((value: object, index: number) => {
+          return <Window key={index} index={index} sans={this} {...value} />;
+        })}
+        <Context show={this.state.context} location={this.state.contextLoaction} />
       </div>
     );
   }
