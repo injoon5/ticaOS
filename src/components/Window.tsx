@@ -98,7 +98,7 @@ class Window extends React.Component<windowProps, windowState> {
                 className="content"
                 style={{ width: this.props.width, height: this.props.height }}
               >
-                <Iframe url="https://google.com" />
+                <Iframe url={this.props.content} />
               </div>
             </div>
           </Draggable>
