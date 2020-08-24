@@ -1,0 +1,38 @@
+* {
+  font-family: 'NanumSquare';
+}
+
+.Hello {
+  padding: .9rem .3rem;
+  overflow: hidden;
+  height: calc(100% - 1.8rem);
+}
+
+.Hello h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.Hello button {
+  border: 0;
+  background-color: #007eff;
+  color: white;
+  font-weight: bolder;
+  font-size: 1rem;
+  border-radius: .3rem;
+  display: flex;
+  padding: .3rem 1rem;
+  margin: 0;
+  margin-left: auto;
+  cursor: pointer;
+}
+
+.Hello button:focus {
+  outline: none;
+}
+
+.Hello a {
+  color: #007eff;
+  font-weight: bold;
+  text-decoration: none;
+}

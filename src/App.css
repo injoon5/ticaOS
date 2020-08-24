@@ -9,3 +9,7 @@
   background-size: cover;
   background-position: center;
 }
+
+.toggleDark {
+  opacity: 0;
+}

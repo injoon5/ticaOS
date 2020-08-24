@@ -1,18 +1,34 @@
 export default [
   {
     title: 'ticaOS Hello',
-    height: null,
-    width: null,
-    content: '/apps/Hello.html',
+    height: 145,
+    width: 500,
+    contentX: 'Hello',
     show: true,
-    icon: 'https://discord.com/assets/df7ba0f4020ca70048a0226d1dfa73f6.svg',
+    icon: 'https://i.imgur.com/eOulIwe.png',
   },
   {
-    title: 'wa sans',
-    height: 150,
-    width: 300,
-    content: '/apps/test.html',
+    title: 'Discord',
+    height: 540,
+    width: 960,
+    contentX: 'Discord',
     show: false,
-    icon: '',
+    icon: 'https://i.imgur.com/pb4AFLO.png',
   },
+  {
+    title: 'Google',
+    height: 540,
+    width: 960,
+    contentX: 'Google',
+    show: false,
+    icon: 'https://i.imgur.com/5QkvVWD.png',
+  },
+  {
+    title: 'Settings',
+    height: 540,
+    width: 960,
+    contentX: 'Settings',
+    show: false,
+    icon: 'https://i.imgur.com/5QkvVWD.png'
+  }
 ]

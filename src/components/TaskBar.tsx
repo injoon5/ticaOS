@@ -4,7 +4,7 @@ import LaunchPad from './LaunchPad';
 import apps from '../apps';
 
 class TaskBar extends React.Component<
-  { sans: any },
+  { sans: any; ss: any; },
   { apps: any; launchpad: boolean; taskbar: boolean }
 > {
   constructor(props: any) {
@@ -26,15 +26,21 @@ class TaskBar extends React.Component<
           <div className="taskbar">
             <div
               className="item logo"
-              onClick={() => this.setState({ launchpad: true, taskbar: false })}
+              onClick={() => {
+                this.setState({ launchpad: true, taskbar: false })
+              }}
             />
             <div className="space"></div>
             {this.state.apps.map((value: any, index: number) => {
+              let tmp = { backgroundImage: `url(${value.icon})`, filter: 'none' }
+              if (this.props.sans.state.theme === 'white') {
+                tmp.filter = 'brightness(0) invert(1)'
+              }
               return (
                 <div
                   className="item"
                   key={index}
-                  style={{ backgroundImage: `url(${value.icon})` }}
+                  style={tmp}
                   onClick={() => {
                     let state = this.props.sans.state;
                     state.apps[index].show = true;

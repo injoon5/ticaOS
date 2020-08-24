@@ -15,6 +15,8 @@ interface State {
   top: number;
   context: boolean;
   contextLoaction: object;
+  theme: string;
+  dark: boolean;
 }
 
 class App extends React.Component<Props, State> {
@@ -25,9 +27,17 @@ class App extends React.Component<Props, State> {
       top: 1,
       context: false,
       contextLoaction: [0, 0],
+      theme: 'white',
+      dark: true,
     };
   }
   render() {
+    let style = {
+      backgroundImage: 'url(/assets/wallpaper_light.png)'
+    }
+    if (this.state.dark) {
+      style.backgroundImage = 'url(/assets/wallpaper_dark.png)'
+    }
     return (
       <div
         className="App"
@@ -43,10 +53,17 @@ class App extends React.Component<Props, State> {
             this.setState({ context: false });
           }
         }}
+        style={{ ...style }}
       >
-        <TaskBar sans={this} />
-        {this.state.apps.map((value: object, index: number) => {
-          return <Window key={index} index={index} sans={this} {...value} />;
+        <TaskBar sans={this} ss={this.setState} />
+        {this.state.apps.map((value: any, index: number) => {
+          if (value.contentX === undefined) {
+            return <Window key={index} index={index} sans={this} contentX={false} {...value} />;
+          } else {
+            return (
+              <Window key={index} index={index} sans={this} contentX={value.contentX} {...value} />
+            )
+          }
         })}
         <Context
           show={this.state.context}

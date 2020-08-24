@@ -1,6 +1,6 @@
 import React from 'react';
 import Draggable from 'react-draggable';
-import Iframe from 'react-iframe';
+import Content from './Content.jsx';
 
 import './Window.css';
 
@@ -11,6 +11,7 @@ interface windowProps {
   content?: any;
   index: number;
   sans?: any;
+  contentX?: any;
 }
 
 interface windowState {
@@ -36,6 +37,17 @@ class Window extends React.Component<windowProps, windowState> {
       });
   }
   render() {
+    let test = this.props.contentX
+    let style = {
+      backgroundColor: '#ffffff',
+      borderColor: '#e2e2e2',
+      color: 'black',
+    };
+    if (this.props.sans.state.dark) {
+      style.backgroundColor = '#222';
+      style.borderColor = '#2e2e2e';
+      style.color = 'white';
+    }
     if (this.props.sans.state.apps[this.props.index].show) {
       return (
         <>
@@ -46,7 +58,7 @@ class Window extends React.Component<windowProps, windowState> {
                   ? `window win${this.props.index}`
                   : 'window'
               }
-              style={{ zIndex: this.state.zIndex }}
+              style={{ zIndex: this.state.zIndex, ...style }}
               onMouseDownCapture={() => {
                 this.props.sans.setState({
                   top: this.props.sans.state.top + 1,
@@ -84,22 +96,30 @@ class Window extends React.Component<windowProps, windowState> {
                   </span>
                 </div>
               </div>
-              <div className="title" style={{ width: this.props.width }}>
+              <div
+                className="title"
+                style={{ width: this.props.width, ...style }}
+              >
                 {this.props.title}
+              </div>
+              <div
+                className="content"
+                style={{
+                  width: this.props.width,
+                  height: this.props.height,
+                  ...style,
+                }}
+              >
+                <Content contentX={test} sans={this.props.sans} />
               </div>
               {/*
               <div
                 className="content"
                 style={{ width: this.props.width, height: this.props.height }}
-                dangerouslySetInnerHTML={{ __html: this.state.code }}
-              />
-              */}
-              <div
-                className="content"
-                style={{ width: this.props.width, height: this.props.height }}
               >
-                <Iframe url={this.props.content} />
+                <Iframe url={this.state.code} />
               </div>
+              */}
             </div>
           </Draggable>
         </>
