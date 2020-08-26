@@ -5,8 +5,7 @@ cache:
   directories:
     - node_modules
 script:
-  - npm test
-  - npm run react-build
+  - CI=false npm run react-build
 
 deploy:
   provider: pages
