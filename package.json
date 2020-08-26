@@ -30,7 +30,7 @@
   },
   "main": "src/electron-starter.js",
   "scripts": {
-    "react-start": "cross-env PORT=5500 && react-scripts start",
+    "react-start": "react-scripts start",
     "react-build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",

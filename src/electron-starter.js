@@ -10,6 +10,7 @@ function createWindow() {
     webPreferences: {
       nodeIntegration: true,
       preload: path.join(app.getAppPath(), 'src/preload.js'),
+      webSecurity: false,
     },
     fullscreen: true,
   });

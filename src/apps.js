@@ -1,7 +1,7 @@
 export default [
   {
     title: 'ticaOS Hello',
-    height: 145,
+    height: 170,
     width: 500,
     contentX: 'Hello',
     show: true,
@@ -29,6 +29,6 @@ export default [
     width: 960,
     contentX: 'Settings',
     show: false,
-    icon: 'https://i.imgur.com/5QkvVWD.png'
+    icon: 'https://i.imgur.com/pMeckjq.png'
   }
 ]

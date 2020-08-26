@@ -3,7 +3,7 @@
 }
 
 .Hello {
-  padding: .9rem .3rem;
+  padding: .9rem;
   overflow: hidden;
   height: calc(100% - 1.8rem);
 }

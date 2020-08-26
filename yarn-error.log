@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/local/bin/node /usr/local/bin/yarn add @types/react-dynamic-import
+  /usr/local/bin/node /usr/local/bin/yarn add @types/react-draggable
 
 PATH: 
   /Users/tica/.autojump/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/tica/.autojump/bin
@@ -14,7 +14,7 @@ Platform:
   darwin x64
 
 Trace: 
-  Error: https://registry.yarnpkg.com/@types%2freact-dynamic-import: Not found
+  Error: https://registry.yarnpkg.com/@types%2freact-draggable: Not found
       at Request.params.callback [as _callback] (/usr/local/lib/node_modules/yarn/lib/cli.js:66987:18)
       at Request.self.callback (/usr/local/lib/node_modules/yarn/lib/cli.js:140748:22)
       at Request.emit (events.js:315:20)

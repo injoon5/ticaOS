@@ -7,7 +7,7 @@ interface Props {
 
 interface State {}
 
-class Tmp extends React.Component<Props, State>{
+class Tmp extends React.Component<Props, State> {
   render() {
     return (
       <div className="Hello">
@@ -21,12 +21,35 @@ class Tmp extends React.Component<Props, State>{
           <a href="https://github.com/thoratica/ticaOS" target="_blank">
             여기
           </a>
-          에서 확인하실 수 있습니다.
+          에서 확인하실 수 있습니다. 심심하시면{' '}
+          <a
+            href=""
+            onClick={(e) => {
+              e.preventDefault();
+              let tmp = this.props.sans.state.apps;
+              for (let i of tmp) {
+                if (i.title === 'Settings') {
+                  console.log('wa');
+                  i.show = true;
+                  this.props.sans.setState(tmp);
+                }
+              }
+            }}
+          >
+            설정
+          </a>
+          이나 확인해보세요 ㅎ
         </p>
-        <button onClick={() => {
-          console.log('test')
-          this.props.sans.state.dark ? this.props.sans.setState({ dark: false }) : this.props.sans.setState({ dark: true })
-        }}>다크/라이트 모드 전환</button>
+        <button
+          onClick={() => {
+            console.log('test');
+            this.props.sans.state.dark
+              ? this.props.sans.setState({ dark: false })
+              : this.props.sans.setState({ dark: true });
+          }}
+        >
+          다크/라이트 모드 전환
+        </button>
       </div>
     );
   }
