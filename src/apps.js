@@ -8,7 +8,7 @@ export default [
     icon: 'https://i.imgur.com/eOulIwe.png',
   },
   {
-    title: 'Settings',
+    title: '설정',
     height: 540,
     width: 960,
     contentX: 'Settings',
@@ -16,11 +16,19 @@ export default [
     icon: 'https://i.imgur.com/pMeckjq.png'
   },
   {
-    title: 'Codespaces',
+    title: 'Codesandbox',
     height: 540,
     width: 960,
-    contentX: 'Codespaces',
+    contentX: 'Codesandbox',
     show: false,
-    icon: 'https://i.imgur.com/ijI80Aa.png'
+    icon: 'https://i.imgur.com/5Gblm7X.png'
+  },
+  {
+    title: '엔1트리',
+    height: 720,
+    width: 1280,
+    contentX: 'entry',
+    show: false,
+    icon: 'https://i.imgur.com/NuslnMH.png'
   },
 ]

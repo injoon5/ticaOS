@@ -2,7 +2,7 @@ import React from 'react';
 
 class Tmp extends React.Component {
   render() {
-    return <iframe title="Visual Studio Codespaces" src="https://aka.ms/vso-login"></iframe>;
+    return <iframe title="codesandbox" src="https://codesandbox.io/s/"></iframe>;
   }
 }
 
