@@ -1,9 +1,8 @@
 import React from 'react';
-import './index.css';
 
 class Tmp extends React.Component {
   render() {
-    return <iframe src="https://google.com"></iframe>;
+    return <iframe title="Visual Studio Codespaces" src="https://aka.ms/vso-login"></iframe>;
   }
 }
 

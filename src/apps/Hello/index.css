@@ -31,8 +31,9 @@
   outline: none;
 }
 
-.Hello a {
+.Hello a, .Hello .link {
   color: #007eff;
   font-weight: bold;
   text-decoration: none;
+  cursor: pointer;
 }

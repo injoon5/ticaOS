@@ -14,22 +14,21 @@ class Tmp extends React.Component<Props, State> {
         <h1>환영합니다!</h1>
         <p>
           이것은 심심해서 만든 ticaOS입니다. ticaOS는{' '}
-          <a href="https://github.com/facebook/react" target="_blank">
+          <a href="https://github.com/facebook/react" target="_blank" rel="noopener noreferrer">
             React
           </a>
           로 개발되었습니다. 모든 소스 코드는{' '}
-          <a href="https://github.com/thoratica/ticaOS" target="_blank">
+          <a href="https://github.com/thoratica/ticaOS" target="_blank" rel="noopener noreferrer">
             여기
           </a>
           에서 확인하실 수 있습니다. 심심하시면{' '}
-          <a
-            href=""
+          <span
+            className="link"
             onClick={(e) => {
               e.preventDefault();
               let tmp = this.props.sans.state.apps;
               for (let i of tmp) {
                 if (i.title === 'Settings') {
-                  console.log('wa');
                   i.show = true;
                   this.props.sans.setState(tmp);
                 }
@@ -37,7 +36,7 @@ class Tmp extends React.Component<Props, State> {
             }}
           >
             설정
-          </a>
+          </span>
           이나 확인해보세요 ㅎ
         </p>
         <button

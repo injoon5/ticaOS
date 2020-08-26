@@ -9,10 +9,6 @@ interface Props {
 interface State {}
 
 class Context extends React.Component<Props, State> {
-  constructor(props: any) {
-    super(props);
-    this.state = {};
-  }
   render() {
     if (this.props.show) {
       return (
